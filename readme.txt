@@ -22,18 +22,22 @@ git reset				    # unstage
 
 # remove (unstage) a staged file
 git reset <file>		    # unstage file
-=========================
 
+=========================
 # merge upstream into local master
 git fetch upstream
 git checkout master
 git merge upstream/master
 
+=========================
 # checkout branch and merge into it master
 git checkout dev git merge
 
 # same as above single liner
 git merge dev master
+
+=========================
+# rebasing
 
 # rebase dev on top of master - best practice, not for public repos
 git checkout dev git rebase master
@@ -44,6 +48,7 @@ git checkout dev git rebase -i master
 # rebase or merge feature within feature branch
 ...
 
+=========================
 # fix author
 git config --global --edit
 git commit --amend --reset-author
